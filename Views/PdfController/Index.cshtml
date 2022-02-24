@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Upload your file";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1> @ViewData["Title"]</h1>
+<form method="post" enctype="multipart/form-data" asp-controller="PdfController" asp-action="Index">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload your file to BLOB storage</p>
+            <input type="file" name="files" accept="application/pdf" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Upload" />
+        </div>
+    </div>
+</form>
